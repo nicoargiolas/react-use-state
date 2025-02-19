@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// Esercizio
+// Oggi proviamo a usare lo stato di React!
+// Dato un array di oggetti contenente i linguaggi del web e le loro descrizioni:
+// Crea una lista di bottoni, uno per linguaggio.
+// Inserisci sotto una card che mostri il titolo e la descrizione del primo linguaggio nell’array.
+// Fare in modo che, cliccando uno dei bottoni, la card in basso visualizzi il linguaggio corrispondente e la relativa descrizione
+// Bonus
+// Se nessun linguaggio è selezionato, la card del dettaglio mostra “nessun linguaggio selezionato”
+// Dare un colore diverso al bottone per cui il linguaggio è attualmente selezionato.
+// Scomporre la card dei dettagli in un componente a parte che mantenga le sue funzionalità
+// Scomporre i buttons in componenti a parte che mantengono tutte le funzionaliltà
+// PS.: vi ricordo la possibilità di usare il dev tool di react sul browser :react:
+
+import LanguagesList from "./components/LanguagesList.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <>
+            <LanguagesList />
+        </>
+    )
 }
 
 export default App
